@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a class="logo">El Ñañito</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="images/menu.png" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contactenos">Contactenos</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu"> 
+                        <img src="images/car.svg" id="img-carrito" alt="">
+                        <div id="carrito">
+                            <table class="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                            <a href="#"id="finalizar-compra" class="btn-2">Finalizar Compra</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>El mejor supermercado que veras en tu vida</h1>
+                <p>
+                    Compra solo calidad
+                </p>
+            </div>
+            <div class="header-img">
+                <img src="https://png.pngtree.com/png-clipart/20230825/original/pngtree-people-shopping-in-supermarket-picture-image_8521612.png" alt="">
+            </div>
+        </div>
+    </header>
+    <section class="oferts container" id="lista-1">
+        <h2>Super Ofertas de la Semana</h2>
+        <div class="oferts-content">
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/29033314-1000-1000/20257376.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Galletas FIELD Coronita Paquete 6un</h3>
+                    <p class="precio">S/5.00</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/1087657-1000-1000/164924.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Whisky JOHNNIE WALKER Black Label Botella 750ml</h3>
+                    <p class="precio">S/95.50</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/6252217-1000-1000/20112491.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Papel Higiénico SUAVE Resistemax Doble Hoja Paquete 40un</h3>
+                    <p class="precio">S/24.90</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar</a>
+                </div>
+            </div>
+        </div>
+        <div class="oferts-content">
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/27517995-1000-1000/K0000008323.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Pack Toallas Higiénicas NOSOTRAS Buenas Noches Paquete 30un</h3>
+                    <p class="precio">S/20.00</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/28235878-1000-1000/20390133.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Galleta VICTORIA Casino Sabor Tres Leches Bolsa 43g Paquete 6un</h3>
+                    <p class="precio">S/3.50</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/28851259-1000-1000/pack-chorizo-otto-kunz-parrillero-paquete-400g-gaseosa-inca-kola-sin-azucar-botella-1.5l.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Pack Chorizo OTTO KUNZ  + Gaseosa INCA KOLA Botella 1.5L</h3>
+                    <p class="precio">S/20.50</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="promotion">
+        <div class="promotion-content container">
+            <div class="promotion-txt">
+                <h2>Las mejores promociones</h2>
+                <p>Aqui podras encontrar promociones en todo tipo de productos
+                    ya que nosotros pensamos en nuestros clientes y la accesibilidad que 
+                    ustedes puedan tener; pensamos en sus bolsillos, pero sin olvidarnos de
+                    los nuestros 
+                </p>
+            </div>
+            <div class="promotion-img">
+                <img src="https://www.ecommercenews.pe/wp-content/uploads/2021/02/delivery-supermercado.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <main class="product container" id="lista-2">
+        <h2>Bebidas</h2>
+        <div class="product-content">
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/3132710-1000-1000/20251491.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Whisky CHIVAS REGAL 18 Años Botella 700ml</h3>
+                    <p class="precio">S/259.90</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="7">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/20590709-1000-1000/20104096.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Gaseosa EVERVESS Ginger Ale Botella 1.5L Pack 2un</h3>
+                    <p class="precio">S/10.50</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="8">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/20590709-1000-1000/20104096.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Ginger Ale Mix BRITVIC Lata 150ml Paquete 4un</h3>
+                    <p class="precio">S/19.90</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/24844165-1000-1000/20073642.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Ginger Ale SCHWEPPES Botella 500ml</h3>
+                    <p class="precio">S/2.80</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/529772-1000-1000/852234.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Ron FLOR DE CAÑA Centenario 12 Años Botella 750ml</h3>
+                    <p class="precio">S/99.90</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="11">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/19996084-1000-1000/987120.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Gaseosa COCA COLA Sin Azúcar Botella 1.5L</h3>
+                    <p class="precio">S/6.90</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="12">Agregar</a>
+                </div>
+            </div>
+        </div>
+        <h2>Galletas</h2>
+        <div class="product-content">
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/27139752-1000-1000/20357203.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Galletas Rellenas con Manjar COSTA Chocman Paquete 6un</h3>
+                    <p class="precio">S/5.50</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="13">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/28235646-1000-1000/20390132.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Galleta VICTORIA Tentación Sabor de Coco Bolsa 43g Paquete 6un</h3>
+                    <p class="precio">S/10.50</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="14">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/29033314-1000-1000/20257376.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Galletas FIELD Coronita Paquete 6un</h3>
+                    <p class="precio">S/5.90</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="15">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/27516665-1000-1000/165259.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Galletas CASINO Rellenas con Crema Sabor a Fresa Paquete 6un</h3>
+                    <p class="precio">S/4.00</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="16">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/11996838-1000-1000/20280942.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Galletas con Coco UNIÓN Integral Bolsa 195g</h3>
+                    <p class="precio">S/10.90</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="17">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/29179436-1000-1000/1057455002.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Galletas PICARAS Clásicas Paquete 6un</h3>
+                    <p class="precio">S/4.60</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="18">Agregar</a>
+                </div>
+            </div>
+        </div>
+        <h2>Abarrotes</h2>
+        <div class="product-content">
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/28650078-1000-1000/20184801.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Azúcar Rubia CARTAVIO Bolsa 5Kg</h3>
+                    <p class="precio">S/20.50</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="19">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/561848-1000-1000/20195162.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Azúcar Rubia COSTEÑO Bolsa 1Kg</h3>
+                    <p class="precio">S/6.50</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="20">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/2269280-1000-1000/20150328.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Trozos de Atún BELL'S en Aceite Vegetal Lata 170g</h3>
+                    <p class="precio">S/5.90</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="21">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/16382415-1000-1000/20281180.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Fideos Fettuccini DON VITTORIO Bolsa 950g</h3>
+                    <p class="precio">S/5.60</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="22">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/28723328-1000-1000/20281991.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Fideos Spaghetti MOLITALIA Bolsa 950g</h3>
+                    <p class="precio">S/5.90</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="23">Agregar</a>
+                </div>
+            </div>
+            <div class="oferts-1">
+                <img src="https://plazavea.vteximg.com.br/arquivos/ids/28196096-1000-1000/20235718.jpg" alt="">
+                <div class="product-txt">
+                    <h3>Aceite Vegetal PRIMOR Clásico Botella 1.8L</h3>
+                    <p class="precio">S/15.90</p>
+                    <input type="number" class="cantidad" value="1" min="1">
+                    <a href="#" class="agregar-carrito btn-3" data-id="24">Agregar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="blog container">
+        <h2>Nuestro Equipo:</h2>
+        <p>
+            Solo los mejores para asi formar lo mejor para nuestros clientes
+        </p>
+        <div class="blog-content" id="nosotros">
+            <div class="blog-1">
+                <img src="images/Alexis1.jpg" alt="">
+                <div class="blog-txt">
+                    <h3>Campos Palomino Alexis</h3>
+                    <p>
+                        Alexis es un alumno de la Universidad Nacional
+                        Hermilio Valdizan, de la carrera de ingenieria 
+                        industrial.
+                        Se considera una persona capaz para distintos proyectos
+                        además de siempre querer ayudar a los demás.
+                    </p>
+                </div>
+            </div>
+            <div class="blog-1">
+                <img src="images/b2.jpg" alt="">
+                <div class="blog-txt">
+                    <p>
+                        David es un alumno de la Universidad Nacional
+                        Hermilio Valdizan, de la carrera de ingenieria 
+                        industrial.
+                        Se considera una persona capaz para distintos proyectos
+                        además de siempre querer ayudar a los demás.
+                    </p>
+                </div>
+            </div>
+            <div class="blog-1">
+                <img src="images/Juan.jpg" alt="">
+                <div class="blog-txt">
+                    <h3>Nuñez Montesinos Juan</h3>
+                    <p>
+                        Juan es un alumno de la Universidad Nacional
+                        Hermilio Valdizan, de la carrera de ingenieria 
+                        industrial.
+                        Se considera una persona capaz para distintos proyectos
+                        además de siempre querer ayudar a los demás.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer container" id="contactenos">
+        <div class="link">
+            <h3>Nuestras Redes</h3>
+            <ul>
+                <li><a>minelnanito@gmail.com</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61562602033996&locale=es_LA">Facebook</a></li>
+                <li><a href="https://www.instagram.com/elnanito3?igsh=bmU3MHExN2w0cmlj">Instagram</a></li>
+                <li><a href="https://chat.whatsapp.com/BQHsGfr6xEV6p8Ivrvw0Hi">Whatsapp</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h3>Alexis</h3>
+            <ul>
+                <li><a>alexis.15.4565@gmail.com</a></li>
+                <li><a href="https://www.facebook.com/Alexis1545?locale=es_LA">Facebook</a></li>
+                <li><a href="https://www.instagram.com/lexsz.zz?igsh=MTN1MTdwaTZpcTQ2OA==">Instagram</a></li>
+                <li><a>+51 902645556</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h3>David</h3>
+            <ul>
+                <li><a>florescapchadavid@gmail.com</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a>+51 982421495</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h3>Juan</h3>
+            <ul>
+                <li><a>jnunezmontecinos@gmail.com</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a>+51 982421495</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Ingresa tus datos para finalizar la compra</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required> <br>
+    
+                <label for="numero-tarjeta">Número de Tarjeta:</label>
+                <input type="text" id="numero-tarjeta" required> <br>
+    
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required> <br>
+    
+                <label for="fecha-vencimiento">Fecha de Vencimiento:</label>
+                <input type="text" id="fecha-vencimiento" required> <br>
+    
+                <label for="dni">Número de DNI:</label>
+                <input type="text" id="dni" required> <br>
+    
+                <button type="button" id="generar-boleta">Finalizar Compra</button>
+            </form>
+        </div>
+    </div>
+    <div class="go-top-container">
+        <div class="go-top-button">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
