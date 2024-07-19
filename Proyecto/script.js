@@ -123,7 +123,6 @@ function generarBoletaPDF() {
         doc.text(20, y, `${producto} - ${precio}`);
         y += 20;
     });
-
     doc.save(`boleta_${fecha}.pdf`);
 
     alert('Compra realizada correctamente. Se ha generado la boleta en PDF.');
